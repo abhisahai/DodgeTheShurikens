@@ -137,7 +137,7 @@ function spawn(){
     missile = createSprite(random(1,width));
     missile.addImage(missileImg);
     missile.velocityY = 5+(score/10);
-    missile.lifetime = 1000
+    missile.lifetime = 10
     missiles.add(missile);
     missiles.setColliderEach('circle');
   }
