@@ -97,7 +97,7 @@ function draw(){
     if(score%50 == 0){
       checkPoint.play();
     }
-
+        
     //death
     if (player.isTouching(missiles)){
       gameState = 'end';
@@ -137,6 +137,7 @@ function spawn(){
     missile = createSprite(random(1,width));
     missile.addImage(missileImg);
     missile.velocityY = 5+(score/10);
+    missile.lifetime = 1000
     missiles.add(missile);
     missiles.setColliderEach('circle');
   }
